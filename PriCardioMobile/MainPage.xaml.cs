@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PriCardioMobile.DataConnection;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,27 @@ namespace PriCardioMobile
         public MainPage()
         {
             this.InitializeComponent();
+            InitData();
+        }
+
+        public void InitData()
+        {
+            var customer = Requests.GetData();
+            textBlockName.Text = customer.Result.Name;
+            textBlockPulse.Text = customer.Result.Pulse.ToString();
+            textBlockSYS.Text = customer.Result.SYS.ToString();
+            textBlockDIA.Text = customer.Result.DIA.ToString();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Windows.Storage.ApplicationData.Current.LocalSettings.Values["id"] = null;
+            this.Frame.Navigate(typeof(LoginPage));
+        }
+
+        private void buttonUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            InitData();
         }
     }
 }

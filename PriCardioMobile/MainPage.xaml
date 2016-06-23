@@ -8,6 +8,20 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="buttonLogout" Content="Logout" HorizontalAlignment="Left" Margin="49,41,0,0" VerticalAlignment="Top" Click="button_Click"/>
+        <Grid HorizontalAlignment="Left" Height="493" Margin="49,63,0,0" VerticalAlignment="Top" Width="272">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="31,27,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top"/>
+            <TextBlock x:Name="textBlockName" TextWrapping="Wrap" Text="TextBlock" Margin="64,47,28,411"/>
 
+            <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="31,107,0,0" TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top"/>
+            <TextBlock x:Name="textBlockPulse" TextWrapping="Wrap" Text="TextBlock" Margin="64,127,28,339"/>
+
+            <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="31,187,0,0" TextWrapping="Wrap" Text="SYS" VerticalAlignment="Top"/>
+            <TextBlock x:Name="textBlockSYS" TextWrapping="Wrap" Text="TextBlock" Margin="64,207,28,260"/>
+
+            <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="31,247,0,0" TextWrapping="Wrap" Text="DIA" VerticalAlignment="Top"/>
+            <TextBlock x:Name="textBlockDIA" TextWrapping="Wrap" Text="TextBlock" Margin="64,272,28,189"/>
+            <Button x:Name="buttonUpdate" Content="Update" HorizontalAlignment="Left" Margin="10,357,0,0" VerticalAlignment="Top" Width="61" Click="buttonUpdate_Click"/>
+        </Grid>
     </Grid>
 </Page>
